@@ -2,7 +2,7 @@ import { apiMovieCredits } from "api";
 import { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import { CastCardWrapper, CastList, CastImg, CastInformation, CastCharacter } from "./MovieCast.styled";
+import { CastCardWrapper, CastList, CastImg, CastInformation, CastCharacter, NoCasts } from "./MovieCast.styled";
 
 
 
@@ -49,7 +49,7 @@ export default function MovieCast() {
 
 
                 </CastList>
-                </div>) : <div> Вибачте, інформація про акторів відсутня</div> }
+                </div>) : <NoCasts> Вибачте, інформація про акторів відсутня</NoCasts> }
     
     </>
 

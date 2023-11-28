@@ -30,3 +30,8 @@ font-size: 10px;
 export const CastCharacter = styled.p`
 font-weight: 700;
 font-size: 10px;`
+
+export const NoCasts = styled.div`
+margin-top:20px;
+margin-bottom: 20px;
+`

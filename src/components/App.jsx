@@ -5,6 +5,7 @@ import { lazy } from 'react';
 // import MovieDetail from 'pages/MovieDetails/MovieDetail';
 // import NotFoundPage from 'pages/NotFoundPage/NotFoundPage';
 import { SharedLayout } from './SharedLayout';
+import { Navigate } from 'react-router-dom';
 // import MovieCast from './MovieCast/MovieCast';
 // import MovieReview from './MovieReview/MovieReview';
 
@@ -15,8 +16,12 @@ const MovieDetail = lazy(() => import('pages/MovieDetails/MovieDetail'));
 const MovieCast = lazy(() => import('./MovieCast/MovieCast'));
 const MovieReview = lazy(() => import('./MovieReview/MovieReview'));
 const NotFoundPage = lazy(() => import('pages/NotFoundPage/NotFoundPage'));
+
+
+
  
 export const App = () => {
+
 
 return (
     
@@ -30,7 +35,14 @@ return (
         <Route path="review" element={<MovieReview/>} />
       </Route>
       </Route>
-      <Route path="*" element={<NotFoundPage />} />
+      <Route path="*"
+        element={
+          <Navigate
+            to="/"
+            replace={true} 
+          />
+        } />
+
       </Routes>
    
   );
